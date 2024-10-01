@@ -60,7 +60,7 @@ ReactDOM.render(
               <div className="column has-text-centered">
                 <div className="publication-links">
                   <span className="link-block">
-                    <a href="null"
+                    <a href="index.html"
                       className="external-link button is-normal is-rounded is-dark">
                       <span className="icon">
                         <i className="fas fa-file-pdf"></i>
@@ -70,22 +70,12 @@ ReactDOM.render(
                   </span>
 
                   <span className="link-block">
-                    <a href="null"
+                    <a href="index.html"
                       className="external-link button is-normal is-rounded is-dark">
                       <span className="icon">
                         <i className="fab fa-github"></i>
                       </span>
                       <span>Code</span>
-                    </a>
-                  </span>
-
-                  <span className="link-block">
-                    <a href="null"
-                      className="external-link button is-normal is-rounded is-dark">
-                      <span className="icon">
-                        <i className="far fa-images"></i>
-                      </span>
-                      <span>Data</span>
                     </a>
                   </span>
 
