@@ -1,6 +1,6 @@
-# LiveCodeBench
+# LiveAoPSBench
 
-This is the repository that contains source code for the [LiveCodeBench website](https://livecodebench.github.io/).
+This is the repository that contains source code for the [LiveAoPSBench website](https://liveaopsbench.github.io/).
 
 # Website License
 
