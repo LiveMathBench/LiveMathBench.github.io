@@ -156,7 +156,7 @@ const Leaderboard = React.memo(function LeaderboardComponent(props: any) {
   const midProblems = countProblemsByDifficulty("Middle School");
   const highProblems = countProblemsByDifficulty("High School");
   const colProblems = countProblemsByDifficulty("College");
-  const hsoProblems = countProblemsByDifficulty("High School Olympiads");
+  const hsoProblems = countProblemsByDifficulty("High School Olympics");
   const othersProblems = countProblemsByDifficulty("Others");
 
   // df is an array of objects
