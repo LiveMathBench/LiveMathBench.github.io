@@ -51,7 +51,7 @@ function get_pass_at_1(
   const hso_pass = formatNumber(
     mean(
       results
-        .filter((result) => result["difficulty"] === "High School Olympiads")
+        .filter((result) => result["difficulty"] === "High School Olympics")
         .map((result) => result["pass@1"])
     )
   )
