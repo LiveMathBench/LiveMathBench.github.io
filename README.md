@@ -1,6 +1,6 @@
 # LiveAoPSBench
 
-This is the repository that contains source code for the [LiveMathBench website](https://livemathbench.github.io/).
+This is the repository that contains source code for the [LiveMathBench website](https://livemathbench.github.io/). 
 
 # Website License
 
