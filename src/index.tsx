@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from "react-dom"
-import Leaderboard from "./LeaderboardComp"
+import ReactDOM from "react-dom";
+import Leaderboard from "./LeaderboardComp";
 
-import "./index.css"
+import "./public_css/bulma.min.css";
+import "./public_css/bulma-carousel.min.css";
+import "./public_css/bulma-slider.min.css"
+import "./index.css";
 
-import mockDataGen from "./mocks/performances_generation.json"
-import Acc from "./mocks/acc_new.json"
+import Acc from "./mocks/acc_new.json";
 
 const LeaderboardTabs = () => {
   // State to track the currently selected tab
@@ -26,7 +28,6 @@ const LeaderboardTabs = () => {
 
   // Function to render the leaderboard based on the selected tab
   const renderLeaderboard = () => {
-    // console.log(activeTab);
     switch (activeTab) {
       case 'tab1':
         return <Leaderboard theme={{ base: "light" }} args={Acc} />;
@@ -34,10 +35,11 @@ const LeaderboardTabs = () => {
         return <div>Select a tab</div>;
     }
   };
+
   return (
     <div className="tabs-container">
       <ul className={`tabs ${isMobile ? 'mobile' : ''}`}>
-        {/* <li className={activeTab === 'tab1' ? 'is-active' : ''} onClick={() => setActiveTab('tab1')}><a>Aops Benchmark</a></li> */}
+        {/* Add your tabs here if needed */}
       </ul>
       <div className="tab-content">
         {renderLeaderboard()}
@@ -46,76 +48,73 @@ const LeaderboardTabs = () => {
   );
 };
 
+const LeaderboardPage = () => {
+  return (
+    <React.StrictMode>
+      {/* Hero Section */}
+      <section className="hero is-medium">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title publication-title">
+              AoPS Dataset: Leveraging Online Olympiad-Level Math Problems for LLMS Training and Contamination-Resistant Evaluation
+            </h1>
+            <div className="buttons is-centered">
+              <a href="paper.pdf" className="button is-primary is-rounded" target="_blank" rel="noopener noreferrer">
+                <span className="icon">
+                  <i className="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/your-repo" className="button is-info is-rounded" target="_blank" rel="noopener noreferrer">
+                <span className="icon">
+                  <i className="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+              <a href="index.html" className="button is-warning is-rounded">
+                <span className="icon">
+                  <i className="fas fa-home"></i>
+                </span>
+                <span>Home</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-ReactDOM.render(
-  <React.StrictMode>
-    <section className="hero">
-      <div className="hero-body">
-        <div className="container is-max-widescreen">
+      {/* Leaderboard Section */}
+      <section className="section" id="leaderboard">
+        <div className="container">
           <div className="columns is-centered">
-            <div className="column has-text-centered">
-              <h1 className="title is-1 publication-title">
-              AOPS DATASET: LEVERAGING ONLINE OLYMPIAD-LEVEL MATH PROBLEMS FOR LLMS TRAINING AND CONTAMINATION-RESISTANT EVALUATION
-              </h1>
-              <div className="column has-text-centered">
-                <div className="publication-links">
-                  <span className="link-block">
-                    <a href="index.html"
-                      className="external-link button is-normal is-rounded is-dark">
-                      <span className="icon">
-                        <i className="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-
-                  <span className="link-block">
-                    <a href="index.html"
-                      className="external-link button is-normal is-rounded is-dark">
-                      <span className="icon">
-                        <i className="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-
-                  <span className="link-block">
-                    <a
-                      href="index.html"
-                      className="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span className="icon">
-                        <i className="fas fa-home"></i>
-                      </span>
-                      <span>Home</span>
-                    </a>
-                  </span>
-
-                </div>
-              </div>
-              <div className="column has-text-centered">
+            <div className="column is-full">
+              <h1 className="title is-3 leaderboard-title has-text-centered">LiveAoPSBench</h1>
+              <div className="content">
                 <LeaderboardTabs />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <footer className="footer">
-      <div className="container">
+      </section>
 
-        <div className="columns is-centered">
-          <div className="column is-8">
-            <div className="content">
-              <p>
-                The source code from this website is borrowed from <a
-                  href="https://github.com/LiveCodeBench/livecodebench.github.io">this template</a>!
-              </p>
-            </div>
-          </div>
+      {/* Footer */}
+      <footer className="footer">
+        <div className="content has-text-centered">
+          <p>
+            &copy; 2024 AOPS Dataset Project. All rights reserved.
+          </p>
+          <p>Web page style inspired by https://livecodebench.github.io/leaderboard.html</p>
+          {/* <p>
+            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+          </p> */}
         </div>
-      </div>
-    </footer>
-  </React.StrictMode>,
+      </footer>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(
+  <LeaderboardPage />,
   document.getElementById("root")
-)
+);

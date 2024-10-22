@@ -1,64 +1,174 @@
-.tabs-container {
-    font-family: Arial, sans-serif;
-}
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap');
 
-.tabs {
-    list-style-type: none;
+/* Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
     padding: 0;
-    display: flex;
-    background: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.tabs li {
-    flex-grow: 1;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #ffffff;
+    color: #2c3e50;
+    padding: 4rem 1.5rem;
     text-align: center;
-    padding: 10px 20px;
-    cursor: pointer;
-    background: #ddd;
-    transition: background-color 0.3s ease;
-}
-
-.tabs li.is-active,
-.tabs li:hover {
-    background: #bbb;
-}
-
-.tab-content {
-    padding: 20px;
-    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin-top: 10px;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .tabs {
-        flex-direction: column;
-        /* Stack tabs vertically */
+    margin: 2rem auto;
+    max-width: 1200px;
+  }
+  
+  .publication-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  /* Leaderboard Title Styling */
+  .leaderboard-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; /* Increased font size */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 2rem;
+    color: #2c3e50;
+  }
+  
+  /* Buttons */
+  .button {
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0.5rem;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .button.is-primary {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .button.is-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  .button.is-info {
+    background-color: #1abc9c;
+    color: #ffffff;
+  }
+  
+  .button.is-info:hover {
+    background-color: #16a085;
+  }
+  
+  .button.is-warning {
+    background-color: #f1c40f;
+    color: #2c3e50;
+  }
+  
+  .button.is-warning:hover {
+    background-color: #d4ac0d;
+  }
+  
+  /* Leaderboard Table Styling */
+  .leaderboard-container {
+    overflow-x: auto;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .leaderboard-table th {
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .leaderboard-table td {
+    background-color: #ffffff;
+    font-size: 1rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .leaderboard-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+  }
+  
+  .leaderboard-table tr:hover td {
+    background-color: #f1f1f1;
+  }
+  
+  /* Section Animations */
+  .section {
+    animation: fadeIn 1s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-
-    .tabs li {
-        padding: 10px 10px;
-        /* Adjust padding for better touch targets */
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .tab-content {
-        padding: 6px;
-        /* Adjust padding for consistency */
-    }
-}
-
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-    .tabs li {
-        padding: 8px 8px;
-        /* Reduce padding on very small screens */
-    }
-
-    .tab-content {
-        padding: 4px;
-        /* Consistent padding adjustment */
-    }
-}
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer a {
+    color: #ecf0f1;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #3498db;
+  }
+  
+  /* Responsive Images */
+  .teaser-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }

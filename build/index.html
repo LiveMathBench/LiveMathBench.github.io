@@ -1,34 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content=" AOPS DATASET: LEVERAGING ONLINE OLYMPIAD-LEVEL MATH PROBLEMS FOR LLMS TRAINING AND CONTAMINATION-RESISTANT EVALUATION" />
+  <meta name="description" content="AOPS DATASET: LEVERAGING ONLINE OLYMPIAD-LEVEL MATH PROBLEMS FOR LLMS TRAINING AND CONTAMINATION-RESISTANT EVALUATION" />
   <meta name="keywords" content="AOPS, LiveMathBench, Math, Large Language Models, LLM, Math LLM, Evaluation, Benchmark" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
     AOPS DATASET: LEVERAGING ONLINE OLYMPIAD-LEVEL MATH PROBLEMS FOR LLMS TRAINING AND CONTAMINATION-RESISTANT EVALUATION
   </title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-
-      gtag("js", new Date())
-
-      gtag("config", "G-PYVRSFMDRL")
-    </script> -->
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
-
+  <!-- Bulma CSS -->
   <link rel="stylesheet" href="./css/bulma.min.css" />
   <link rel="stylesheet" href="./css/bulma-carousel.min.css" />
   <link rel="stylesheet" href="./css/bulma-slider.min.css" />
@@ -37,6 +22,135 @@
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="icon" href="./images/favicon.svg" />
 
+  <!-- Custom Styles -->
+  <style>
+    /* Body Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #ffffff;
+      color: #2c3e50;
+      padding: 4rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+
+    .publication-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    /* Buttons */
+    .button {
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.3s;
+      margin: 0.5rem;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button.is-primary {
+      background-color: #3498db;
+      color: #ffffff;
+    }
+
+    .button.is-primary:hover {
+      background-color: #2980b9;
+    }
+
+    .button.is-info {
+      background-color: #1abc9c;
+      color: #ffffff;
+    }
+
+    .button.is-info:hover {
+      background-color: #16a085;
+    }
+
+    .button.is-warning {
+      background-color: #f1c40f;
+      color: #2c3e50;
+    }
+
+    .button.is-warning:hover {
+      background-color: #d4ac0d;
+    }
+
+    /* Section Animations */
+    .section {
+      animation: fadeIn 1s ease-in-out;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      border-radius: 8px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer a {
+      color: #ecf0f1;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: #3498db;
+    }
+
+    /* Responsive Images */
+    .teaser-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 1rem 0;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./js/fontawesome.all.min.js"></script>
   <script src="./js/bulma-carousel.min.js"></script>
@@ -46,68 +160,51 @@
 
 <body>
 
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero is-medium">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">
-              AOPS DATASET: LEVERAGING ONLINE OLYMPIAD-LEVEL MATH PROBLEMS FOR LLMS TRAINING AND CONTAMINATION-RESISTANT EVALUATION
-            </h1>
+      <div class="container">
+        <h1 class="title publication-title">
+          AOPS Dataset: Leveraging Online Olympiad-Level Math Problems for LLMS Training and Contamination-Resistant Evaluation
+        </h1>
 
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- PDF Link. -->
-                <span class="link-block">
-                  <a href="index.html" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a href="index.html"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                <!-- Leaderboard Link. -->
-                <span class="link-block">
-                  <a href="leaderboard.html" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa fa-trophy"></i>
-                    </span>
-                    <span>Leaderboard</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="buttons is-centered">
+          <a href="paper.pdf" class="button is-primary is-rounded" target="_blank">
+            <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+            </span>
+            <span>Paper</span>
+          </a>
+          <a href="https://github.com/your-repo" class="button is-info is-rounded" target="_blank">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span>
+          </a>
+          <a href="leaderboard.html" class="button is-warning is-rounded">
+            <span class="icon">
+              <i class="fa fa-trophy"></i>
+            </span>
+            <span>Leaderboard</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Dataset Comparison</h2>
-          <div class="content has-text-justified">
-            <div class="columns is-centered">
-              <img src="./images/Table1.jpg" alt="Dataset Comparison" class="teaser-image center" width="80%"
-                height="80%" />
-            </div>
+  <!-- Introduction Section -->
+  <section class="section" id="introduction">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Introduction</h2>
+          <div class="content">
             <p>
-              Here is the comparison of our dataset with other related datasets from the literature. Our dataset
-              uniquely includes timestamp information and leverages open-source large language models (LLMs) like
-              <strong>Qwen 2.5 72B</strong> for solution rewrites. <strong>⋆</strong> denotes inclusion of additional training datasets such as
-              <strong>GSM8K</strong>, <strong>Orca-Math</strong>, and <strong>MATH</strong>. Datasets marked with <strong>†</strong> have their solutions entirely generated by
-              LLM.
+              Advances in Large Language Models (LLMs) have sparked interest in their ability to solve Olympiad-level math problems.
+              However, the training and evaluation of these models are constrained by the limited size and quality of available datasets, as creating large-scale data for such advanced problems requires extensive effort from human experts.
+              In addition, current benchmarks are prone to contamination, leading to unreliable evaluations.
+              In this work, we present an automated pipeline that leverages the rich resources of the Art of Problem Solving (AoPS) forum, which predominantly features Olympiad-level problems and community-driven solutions.
+              Using open-source LLMs, we develop a method to extract question-answer pairs from the forum, resulting in AoPS-Instruct, a dataset of more than 650,000 high-quality QA pairs. Our experiments demonstrate that fine-tuning LLMs on AoPS-Instruct improves their reasoning abilities across various benchmarks. Moreover, we build an automatic pipeline that introduces LiveAoPSBench, an evolving evaluation set with timestamps, derived from the latest forum data, providing a contamination-resistant benchmark for assessing LLM performance. Notably, we observe a significant decline in LLM performance over time, suggesting their success on older examples may stem from pre-training exposure rather than true reasoning ability.
             </p>
           </div>
         </div>
@@ -115,75 +212,92 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">AoPS-Instruct Pipeline</h2>
-          <div class="content has-text-justified">
-            <div class="columns is-centered">
-              <img src="./images/Figure2.jpg" alt="AoPS-Instruct Pipeline" class="teaser-image center" width="80%"
-                height="80%" />
-            </div>
+  <!-- Contamination-Resistant Evaluation Section -->
+  <section class="section" id="evaluation">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Contamination-Resistant Evaluation</h2>
+          <div class="content">
+            <figure class="image">
+              <img src="./images/aopsbench_1.png" alt="LiveAoPSBench" class="teaser-image">
+            </figure>
             <p>
-              This is the overall process of our dataset curation. We have total 5 steps:
+              Accuracy trends of various LLMs on LiveAoPSBench over an 18-month period highlight a consistent decline in performance.
+              We separate math expert models from general-purpose models, observing that degradation in accuracy varies across models, ranging from 2.4% to 23.6%.
             </p>
-            <p><strong>1. Raw Forum Discussion Collection.</strong></p>
-            <p><strong>2. Math Question Detection.</strong></p>
-            <p><strong>3. Question-Answer Extraction.</strong></p>
-            <p><strong>4. Solution Rewriting.</strong></p>
-            <p><strong>5. Data Decontamination.</strong></p>
-            <p>
-                Top: Dataset cleaning pipeline (Training). First, irrelevant topics are detected by a small LLM, then we extract questions and answers
-                from relevant discussions, and then each answer is rewritten into a step-by-step solution. Bottom: LiveAoPSBench curation pipeline (Evaluation).
-                We take the most recent posts, use two LLMs to rewrite the solution, filter out questions without clear final answer, and create the final evaluation
-                set.
-            </p>          
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+  <!-- Dataset Pipeline Section -->
+  <section class="section" id="pipeline">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Dataset Pipeline</h2>
+          <div class="content">
+            <figure class="image">
+              <img src="./images/Figure2.jpg" alt="AoPS-Instruct Pipeline" class="teaser-image">
+            </figure>
+            <p>
+              <strong>Top:</strong> Dataset curation pipeline (Training). First, irrelevant topics are detected by a small LLM, then we extract questions and answers from relevant discussions, and then each answer is rewritten into a step-by-step solution.
+            </p>
+            <p>
+              <strong>Bottom:</strong> LiveAoPSBench curation pipeline (Evaluation). We take the most recent posts, use two LLMs to rewrite the solution, filter out questions without clear final answers, and create the final evaluation set.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dataset Statistics Section -->
+  <section class="section" id="statistics">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full">
           <h2 class="title is-3">Dataset Statistics</h2>
-          <div class="content has-text-justified">
-            <div class="columns is-centered">
-              <img src="./images/Figure4.jpg" alt="Dataset Statistics" class="teaser-image center" width="80%"
-                height="80%" />
-            </div>
+          <div class="content">
+            <figure class="image">
+              <img src="./images/Table1.jpg" alt="Dataset Statistics" class="teaser-image">
+            </figure>
             <p>
-              We provide a better overview of the AoPS dataset in <strong>Figure</strong>. As shown in <strong>Figure a</strong>, more than
-              60% of the questions have only one answer, while around 24% and 8% have two and three answers,
-              respectively. <strong>Figure b</strong> shows the number of posts across each year, with a cut-off of August 2024.
-              We observe that each year at least 15K mathematical questions are posted to the forum. This translates
-              to more than 1,000 monthly questions, which shows the potential of the AoPS forum to be used as a
-              training, and especially evaluation set. <strong>Figure c</strong> shows a breakdown of the types of questions
-              in our dataset. Proof questions and numerical questions with about 32% and 28% constitute the majority
-              of the questions in our dataset. 
+              Here is the comparison of our dataset with other related datasets from the literature. Our dataset uniquely includes timestamp information and leverages open-source large language models (LLMs) like <strong>Qwen 2.5 72B</strong> for solution rewrites. <strong>⋆</strong> denotes inclusion of additional training datasets such as <strong>GSM8K</strong>, <strong>Orca-Math</strong>, and <strong>MATH</strong>. Datasets marked with <strong>†</strong> have their solutions entirely generated by LLMs.
+            </p>
+          </div>
+          <div class="content">
+            <figure class="image">
+              <img src="./images/Figure4.jpg" alt="Dataset Statistics" class="teaser-image">
+            </figure>
+            <p>
+              We provide a better overview of the AoPS dataset in <strong>Figure</strong>. As shown in <strong>Figure a</strong>, more than 60% of the questions have only one answer, while around 24% and 8% have two and three answers, respectively. <strong>Figure b</strong> shows the number of posts across each year, with a cut-off of August 2024. We observe that each year at least 15K mathematical questions are posted to the forum. This translates to more than 1,000 monthly questions, showcasing the potential of the AoPS forum to be used as a training and, especially, evaluation set. <strong>Figure c</strong> shows a breakdown of the types of questions in our dataset. Proof questions and numerical questions with about 32% and 28% constitute the majority of the questions in our dataset.
             </p>
             <p>
-              Finally, <strong>Figure d</strong> shows the pairwise overlap between each pair of
-              popular supervised fine-tuning datasets using substring matching between the two datasets of each pair.
-              Among the two Olympiad-level datasets (i.e., ours and Numina), our dataset has the least overlap with
-              common datasets (with less than 14.1% overlap), which shows the number of new data points.
-            </p>          
+              Finally, <strong>Figure d</strong> shows the pairwise overlap between each pair of popular supervised fine-tuning datasets using substring matching between the two datasets of each pair. Among the two Olympiad-level datasets (i.e., ours and Numina), our dataset has the least overlap with common datasets (with less than 14.1% overlap), indicating a significant number of new data points.
+            </p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>Anonymous
-</code></pre>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2024 AOPS Dataset Project. All rights reserved.
+      </p>
+      <!-- <p>
+        <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-repo" target="_blank"><i class="fab fa-github"></i></a>
+      </p> -->
     </div>
-  </section> -->
+  </footer>
+
+</body>
 
 </html>
