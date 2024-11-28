@@ -77,6 +77,12 @@ const LeaderboardPage = () => {
                 </span>
                 <span>Home</span>
               </a>
+              <a href="./data/LiveAoPSBench_v1.0.jsonl" className="button is-success is-rounded">
+                <span className="icon">
+                  <i className="fa fa-database"></i>
+                </span>
+                <span>LiveAoPSBench Data</span>
+              </a>
             </div>
           </div>
         </div>
