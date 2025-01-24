@@ -56,7 +56,7 @@ const LeaderboardPage = () => {
         <div className="hero-body">
           <div className="container">
             <h1 className="title publication-title">
-              AoPS Dataset: Leveraging Online Olympiad-Level Math Problems for LLMS Training and Contamination-Resistant Evaluation
+              Leveraging Online Olympiad-Level Math Problems for LLMS Training and Contamination-Resistant Evaluation
             </h1>
             <div className="buttons is-centered">
               <a href="paper.pdf" className="button is-primary is-rounded" target="_blank" rel="noopener noreferrer">
