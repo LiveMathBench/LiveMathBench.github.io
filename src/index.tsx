@@ -106,7 +106,7 @@ const LeaderboardPage = () => {
       <footer className="footer">
         <div className="content has-text-centered">
           <p>
-            &copy; 2024 AOPS Dataset Project. All rights reserved.
+            &copy; 2024 OlympicMath Dataset Project. All rights reserved.
           </p>
           <p>Web page style inspired by https://livecodebench.github.io/leaderboard.html</p>
           {/* <p>
