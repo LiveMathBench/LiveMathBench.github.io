@@ -65,7 +65,7 @@ const LeaderboardPage = () => {
                 </span>
                 <span>Paper</span>
               </a>
-              <a href="https://github.com/your-repo" className="button is-info is-rounded" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/LiveMathBench/LiveMathBench.github.io" className="button is-info is-rounded" target="_blank" rel="noopener noreferrer">
                 <span className="icon">
                   <i className="fab fa-github"></i>
                 </span>
