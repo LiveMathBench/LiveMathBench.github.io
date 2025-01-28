@@ -77,7 +77,7 @@ const LeaderboardPage = () => {
                 </span>
                 <span>Home</span>
               </a>
-              <a href="https://huggingface.co/datasets/jojo23333/LiveAoPSBench-2024" className="button is-success is-rounded">
+              <a href="./data/LiveAoPSBench_v1.0.jsonl" className="button is-success is-rounded">
                 <span className="icon">
                   <i className="fa fa-database"></i>
                 </span>
