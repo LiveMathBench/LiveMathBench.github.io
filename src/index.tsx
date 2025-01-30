@@ -7,7 +7,7 @@ import "./public_css/bulma-carousel.min.css";
 import "./public_css/bulma-slider.min.css"
 import "./index.css";
 
-import Acc from "./mocks/acc_new.json";
+import Acc from "./mocks/acc2024.json";
 
 const LeaderboardTabs = () => {
   // State to track the currently selected tab
