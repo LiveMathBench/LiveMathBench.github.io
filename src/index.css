@@ -20,7 +20,7 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 1200px;
   }
   
@@ -36,7 +36,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem; /* Increased font size */
     font-weight: 700; /* Bold font weight */
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #2c3e50;
   }
   
