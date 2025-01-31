@@ -91,14 +91,14 @@ const LeaderboardPage = () => {
 
       {/* Leaderboard Section */}
       <section className="section" id="leaderboard">
-       <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-full">
-            <h2 class="title is-3">Performance over time</h2>
-            <div class="content">
-              <figure class="image">
-                <img src="./images/aops24_performance_over_time.png" alt="LiveAoPSBench" class="teaser-image">
-              </figure>
+        <div className="container">
+          <div className="columns is-centered">
+            <div className="column is-full">
+              <h2 className="title is-3">Performance over time</h2>
+              <div className="content">
+                <figure className="image">
+                  <img src="./images/aops24_performance_over_time.png" alt="LiveAoPSBench" className="teaser-image" />
+                </figure>
               </div>
             </div>
           </div>
