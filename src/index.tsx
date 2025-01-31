@@ -88,8 +88,10 @@ const LeaderboardPage = () => {
         </div>
       </section>
 
-      <section class="section" id="evaluation">
-      <div class="container">
+
+      {/* Leaderboard Section */}
+      <section className="section" id="leaderboard">
+       <div class="container">
         <div class="columns is-centered">
           <div class="column is-full">
             <h2 class="title is-3">Performance over time</h2>
@@ -101,10 +103,6 @@ const LeaderboardPage = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Leaderboard Section */}
-      <section className="section" id="leaderboard">
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-full">
